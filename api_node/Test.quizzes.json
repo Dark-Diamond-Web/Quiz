@@ -1,0 +1,45 @@
+[{
+  "_id": {
+    "$oid": "65e39112afa75a08ea67586e"
+  },
+  "id": 1,
+  "text": "What is the capital of France?",
+  "options": [
+    "London",
+    "Paris",
+    "Berlin",
+    "Rome"
+  ],
+  "correctAnswer": "Paris",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65e39149afa75a08ea675870"
+  },
+  "id": 2,
+  "text": "Which planet is known as the Red Planet?",
+  "options": [
+    "Mars",
+    "Venus",
+    "Jupiter",
+    "Mercury"
+  ],
+  "correctAnswer": "Mars",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65e39182afa75a08ea675872"
+  },
+  "id": 3,
+  "text": "Who wrote 'To Kill a Mockingbird'?",
+  "options": [
+    "Harper Lee",
+    "Jane Austen",
+    "F. Scott Fitzgerald",
+    "Ernest Hemingway"
+  ],
+  "correctAnswer": "Harper Lee",
+  "__v": 0
+}]

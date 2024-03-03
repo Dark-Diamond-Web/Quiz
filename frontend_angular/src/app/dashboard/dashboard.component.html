@@ -1,0 +1,86 @@
+<section>
+    <div class="Body" *ngIf="data">
+        <div class="section" *ngFor="let data of Question">
+            <div class="Header">
+                <div class="BackButton">
+                    <img srcset="assets\Images\Back.png">
+                </div>
+                <div class="Heading">
+                    <p>
+                        English for beginner
+                    </p>
+                </div>
+                <div class="BackButton">
+                    <img srcset="assets\Images\Ques.png">
+                </div>
+            </div>
+            <div class="QuestionDetails">
+                <h1>
+                    Question {{data.id}}/{{Que_Length}}
+                </h1>
+            </div>
+            <div class="Question">
+                <h2>
+                    Q. {{data.id}} {{data.text}}
+                </h2>
+            </div>
+            <div class="Answer_Body">
+                <div class="Options" tabindex="0" *ngFor="let Data of Question[0].options"
+                 (click)="Selected_Answer(Data)">
+                    <div class="Circle">
+                        <div class="Circle_A">
+                            <span class="Circle_B"></span>
+                        </div>
+                    </div>
+                    <div class="Options_Content">
+                        <p>
+                            {{Data}}
+                        </p>
+                    </div>
+                </div> 
+                  
+            </div>
+            <div class="NextButton">
+                <button *ngIf="Dissable">
+                    Next
+                </button>
+                <button (click)="next()" *ngIf="Enable">
+                    Next
+                </button>
+            </div>  
+        </div>
+    </div>
+    <div class="Body" *ngIf="SelectedQues">
+        <div class="Result"> 
+            <div class="Selected_Answer" *ngFor="let data of Selected_Answer_Bucket">
+                <p>QuestionId: <strong>{{data.id}}</strong> Selected Option: <strong>{{data.ans}}</strong></p>
+            </div>
+            <div class="Submit">
+                <button (click)="Submit()">
+                    Submit
+                </button>
+            </div> 
+        </div>
+    </div>
+    <div class="Body" *ngIf="FinalResult">
+        <div class="Result"> 
+            <div class="QuestionDetails">
+                <h1>
+                    Your Submited Answer
+                </h1>
+            </div>
+            <div class="Selected_Answer" *ngFor="let data of Selected_Answer_Bucket">
+                <p>QuestionId: <strong>{{data.id}}</strong> Selected Option: <strong>{{data.ans}}</strong></p>
+            </div> 
+            <div class="QuestionDetails">
+                <h3>
+                    Currect Answer
+                </h3>
+            </div>
+            <div class="Selected_Answer" *ngFor="let data of FinalAns">
+                <p>QuestionId: <strong>{{data.id}}</strong> Selected Option: <strong>{{data.correctAnswer}}</strong></p>
+            </div> 
+        </div>
+    </div>
+</section>  
+ 
